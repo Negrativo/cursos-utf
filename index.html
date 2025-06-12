@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Programação Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>Aprenda Programação</h1>
+    <p>Escolha o seu caminho e comece a programar hoje mesmo!</p>
+</header>
+
+<section class="team-presentation">
+    <h2>Conheça a Nossa Equipe</h2>
+    <div class="team-members">
+        <div class="member-card">
+            <img src="public/joaoLucas.jpg" alt="Foto de João Lucas">
+            <h3>João Lucas</h3>
+            <p>Desenvolvedor apaixonado por programação Java e JavaScript. Adoro resolver problemas complexos e criar soluções elegantes.</p>
+        </div>
+        <div class="member-card">
+            <img src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Matheus" alt="Foto de Matheus">
+            <h3>Matheus</h3>
+            <p>Entusiasta de novas tecnologias e desenvolvimento web, focado em Node.js para soluções escaláveis.</p>
+        </div>
+        <div class="member-card">
+            <img src="https://via.placeholder.com/150/008000/000000?text=Thalles" alt="Foto de Thalles">
+            <h3>Thalles</h3>
+            <p>Apto em Python e em frameworks como Flask, com foco em criar aplicações eficientes e robustas.</p>
+        </div>
+    </div>
+</section>
+
+<main class="courses-container">
+    <section class="course-card" data-language="java">
+        <h2>Curso de Java</h2>
+        <p>Aprenda Java do básico ao avançado e desenvolva aplicações robustas.</p>
+    </section>
+
+    <section class="course-card" data-language="node">
+        <h2>Curso de Node.js</h2>
+        <p>Construa aplicações web escaláveis com JavaScript no lado do servidor.</p>
+    </section>
+
+    <section class="course-card" data-language="flask">
+        <h2>Curso de Flask</h2>
+        <p>Desenvolva aplicações web Python de forma rápida e eficiente com Flask.</p>
+    </section>
+</main>
+
+<section id="courseLessonsSection" class="course-lessons-section">
+    <h2 id="lessonsSectionTitle"></h2>
+    <div id="lessonsCardsContainer" class="lessons-cards-grid">
+    </div>
+    <button id="closeLessonsSection">Fechar Aulas</button>
+</section>
+
+<footer>
+    <p>&copy; 2025 Cursos de Programação Online realizado por alunos da Universidade Tecnológica Federal do Paraná.</p>
+    <p>Conteúdo de qualidade para o seu desenvolvimento profissional.</p>
+</footer>
+
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button close-video-modal">&times;</span>
+        <div class="video-wrapper">
+            <iframe id="youtube-video" width="560" height="315" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
