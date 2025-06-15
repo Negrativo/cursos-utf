@@ -75,7 +75,32 @@ header h1 {
     font-size: 0.9em;
     color: #555;
 }
+.member-card .social-links {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre o ícone e o link, e entre múltiplos links */
+}
 
+.member-card .social-links a {
+    color: #3498db; /* Cor dos links */
+    font-size: 1.1em;
+    text-decoration: none; /* Remove sublinhado padrão */
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex; /* Para alinhar o ícone e o texto */
+    align-items: center;
+    gap: 5px; /* Espaçamento entre o ícone e o texto "Portfólio" */
+}
+
+.member-card .social-links a:hover {
+    color: #2980b9; /* Cor ao passar o mouse */
+    transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
+}
+
+.member-card .social-links i.fa-brands {
+    font-size: 1.5em; /* Tamanho do ícone do GitHub */
+}
 
 .courses-container {
     display: flex;
