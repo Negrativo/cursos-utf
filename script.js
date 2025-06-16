@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: "Aula 2: Iniciando projeto Java Spring boot", videoId: "-cuEyk4ICz0", description: "Entenda a inicialização de um projeto Spring Boot e estrutura de projeto." },
                 { title: "Aula 3: Entendendo e estruturando Repository", videoId: "NSnabzSX0DI", description: "Aprenda a criar uma interface de Repository para trabalhar a entidade com o banco de dados." },
                 { title: "Aula 4: Entendendo e estruturando Service", videoId: "P1QyMWyBGwE", description: "Aprenda a criar uma service para manipular informações do banco de dados junto a repository." },
-                { title: "Aula 5: Entendendo e estruturando Controler", videoId: "", description: "Aprenda a criar uma controler para dispobilizar os processos do servidor Java via API." }
+                { title: "Aula 5: Entendendo e estruturando Controler", videoId: "MKbavgytXEw", description: "Aprenda a criar uma controler para dispobilizar os processos do servidor Java via API." },
+                { title: "Aula 6: Fazendo requisições para o servidor Java", videoId: "MKbavgytXEw", description: "Aprenda a fazer requisições http para o servidor Java e execute os processos construidos em aula." }
             ]
         },
         node: {
