@@ -14,10 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
         java: {
             title: "Curso de Java",
             lessons: [
-                { title: "Aula 1: Introdução ao Java", videoId: "bI_d6iLwF6Y", description: "Entenda os fundamentos e o ambiente de desenvolvimento Java." },
-                { title: "Aula 2: Variáveis e Tipos de Dados", videoId: "sJzZ3g5M28Q", description: "Explore como declarar e usar variáveis e os diferentes tipos de dados em Java." },
-                { title: "Aula 3: Estruturas de Controle", videoId: "dQw4w9WgXcQ", description: "Aprenda a controlar o fluxo do seu código com condicionais (if/else) e laços (for/while)." },
-                { title: "Aula 4: Orientação a Objetos I", videoId: "dQw4w9WgXcQ", description: "Introdução aos conceitos de classes, objetos, atributos e métodos." }
+                { title: "Aula 1: Introdução ao Java e configuração de ambiente", videoId: "2vMuo6lG9Nk", description: "Entenda os fundamentos e o ambiente de desenvolvimento Java." },
+                { title: "Aula 2: Iniciando projeto Java Spring boot", videoId: "-cuEyk4ICz0", description: "Entenda a inicialização de um projeto Spring Boot e estrutura de projeto." },
+                { title: "Aula 3: Entendendo e estruturando Repository", videoId: "NSnabzSX0DI", description: "Aprenda a criar uma interface de Repository para trabalhar a entidade com o banco de dados." },
+                { title: "Aula 4: Entendendo e estruturando Service", videoId: "P1QyMWyBGwE", description: "Aprenda a criar uma service para manipular informações do banco de dados junto a repository." },
+                { title: "Aula 5: Entendendo e estruturando Controler", videoId: "MKbavgytXEw", description: "Aprenda a criar uma controler para dispobilizar os processos do servidor Java via API." },
+                { title: "Aula 6: Fazendo requisições para o servidor Java", videoId: "MKbavgytXEw", description: "Aprenda a fazer requisições http para o servidor Java e execute os processos construidos em aula." }
             ]
         },
         node: {
