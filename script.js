@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         flask: {
             title: "Curso de Flask",
             lessons: [
-                { title: "Aula 1: Introdução ao Flask", videoId: "Z1yRj5N1ZpM", description: "Visão geral do microframework Flask e sua filosofia de desenvolvimento web." },
+                { title: "Aula 1: Introdução ao Flask", videoId: "Inp79ZcIjDI", description: "Visão geral do microframework Flask e sua filosofia de desenvolvimento web." },
                 { title: "Aula 2: Rotas e Views", videoId: "4_s2Yc-K0Xw", description: "Crie URLs e funções Python para responder às requisições web." },
                 { title: "Aula 3: Templates com Jinja2", videoId: "yJg_W-S7Bjo", description: "Gere HTML dinâmico utilizando a poderosa linguagem de template Jinja2." },
                 { title: "Aula 4: Formulários e WTForms", videoId: "yJg_W-S7Bjo", description: "Lide com entrada de dados do usuário e validação com WTForms." }
