@@ -41,10 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
         node: {
             title: "Curso de Node.js",
             lessons: [
-                { title: "Aula 1: Primeiros Passos com Node.js", videoId: "k024_dK99xU", description: "Instalação, execução de scripts básicos e o ciclo de vida de uma aplicação Node." },
-                { title: "Aula 2: Módulos e NPM", videoId: "TlB_eWDSMx4", description: "Entenda como usar módulos nativos e externos, e gerencie dependências com o NPM." },
-                { title: "Aula 3: Servidores Web com Express", videoId: "Fk3-t_R8B7Q", description: "Construa uma API RESTful simples usando o framework Express.js." },
-                { title: "Aula 4: Banco de Dados com MongoDB", videoId: "Fk3-t_R8B7Q", description: "Conecte sua aplicação Node.js a um banco de dados MongoDB." }
+                { title: "Aula 1: Configuração do ambiente de desenvolvimento", videoId: "IuPXnmtG4kk", description: "Instalação das dependencias do projeto e criação do modelo de dados que irá ser utilizado nas operações implementadas." },
+                { title: "Aula 2: Endpoints de CREATE e READ", videoId: "fKAt8qw05oY", description: "Ínicio do desenvolvimento da CRUD de livros com implementações das rotas de cadastro, listagem e listagem por id." },
+                { title: "Aula 3: Endpoints de UPDATE e DELETE", videoId: "jU1Axi9MZkE", description: "Continuação do desenvolvimento da CRUD com o desenvolvimento das rotas de edição e exclusão de um livro." },
+                {
+                    type: "pdf",
+                    title: "Exercícios de Fixação - Javascript",
+                    pdfUrl: "public/tasks_node.png",
+                    description: "Lista de exercícios para praticar os conceitos de programação backend com node.js aprendidos nas aulas.",
+                    iconClass: "fa-file-pdf",
+                    buttonText: "Visualizar Exercícios"
+                },
             ]
         },
         flask: {
