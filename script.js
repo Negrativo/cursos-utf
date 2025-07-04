@@ -19,7 +19,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: "Aula 3: Entendendo e estruturando Repository", videoId: "NSnabzSX0DI", description: "Aprenda a criar uma interface de Repository para trabalhar a entidade com o banco de dados." },
                 { title: "Aula 4: Entendendo e estruturando Service", videoId: "P1QyMWyBGwE", description: "Aprenda a criar uma service para manipular informações do banco de dados junto a repository." },
                 { title: "Aula 5: Entendendo e estruturando Controler", videoId: "MKbavgytXEw", description: "Aprenda a criar uma controler para dispobilizar os processos do servidor Java via API." },
-                { title: "Aula 6: Fazendo requisições para o servidor Java", videoId: "MKbavgytXEw", description: "Aprenda a fazer requisições http para o servidor Java e execute os processos construidos em aula." }
+                { title: "Aula 6: Fazendo requisições para o servidor Java", videoId: "MKbavgytXEw", description: "Aprenda a fazer requisições http para o servidor Java e execute os processos construidos em aula." },
+                {
+                    title: "Exercícios de Fixação - Java",
+                    type: "pdf",
+                    pdfUrl: "public/exercicios_java.pdf",
+                    description: "Baixe uma lista de exercícios para praticar os conceitos de Java aprendidos nas aulas.",
+                    iconClass: "fa-file-pdf",
+                    buttonText: "Baixar Exercícios"
+                },
+                {
+                    title: "Resolução dos Exercícios - Java",
+                    type: "pdf",
+                    pdfUrl: "public/resolucao_java.pdf",
+                    description: "Acesse as resoluções detalhadas dos exercícios de Java para conferir seu aprendizado.",
+                    iconClass: "fa-file-pdf",
+                    buttonText: "Ver Resolução"
+                }
             ]
         },
         node: {
@@ -49,27 +65,34 @@ document.addEventListener('DOMContentLoaded', () => {
             const course = coursesData[language];
 
             if (course) {
-                lessonsSectionTitle.textContent = `Aulas do ${course.title}`; // Título da seção animada
-                lessonsCardsContainer.innerHTML = ''; // Limpa os cards de aula anteriores
+                lessonsSectionTitle.textContent = `Aulas do ${course.title}`;
+                lessonsCardsContainer.innerHTML = '';
 
-                // Cria e adiciona os cards de aula
+                // Cria e adiciona os cards de aula ou PDF
                 course.lessons.forEach(lesson => {
-                    const lessonCard = document.createElement('div'); // Usamos div para o card de aula
+                    const lessonCard = document.createElement('div');
                     lessonCard.classList.add('lesson-card');
-                    lessonCard.dataset.videoId = lesson.videoId;
 
-                    lessonCard.innerHTML = `
-                        <h3>${lesson.title}</h3>
-                        <p>${lesson.description}</p>
-                    `;
-
+                    // Lógica para diferenciar entre vídeos e PDFs
+                    if (lesson.type === 'pdf') {
+                        lessonCard.classList.add('pdf-card');
+                        lessonCard.innerHTML = `
+                            <h3><i class="fas ${lesson.iconClass}"></i> ${lesson.title}</h3>
+                            <p>${lesson.description}</p>
+                            <a href="${lesson.pdfUrl}" target="_blank" class="pdf-button">${lesson.buttonText}</a>
+                        `;
+                    } else {
+                        // É um vídeo
+                        lessonCard.dataset.videoId = lesson.videoId;
+                        lessonCard.innerHTML = `
+                            <h3>${lesson.title}</h3>
+                            <p>${lesson.description}</p>
+                        `;
+                    }
                     lessonsCardsContainer.appendChild(lessonCard);
                 });
 
-                // Adiciona a classe 'active' para exibir e animar a seção
                 courseLessonsSection.classList.add('active');
-
-                // Opcional: Rola a página para a seção de aulas
                 courseLessonsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
@@ -78,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listener para os cliques nos cards de aula (dentro da seção animada)
     lessonsCardsContainer.addEventListener('click', (event) => {
         const target = event.target;
-        // Verifica se o clique foi em um elemento que é um .lesson-card ou está dentro dele
         const clickedLessonCard = target.closest('.lesson-card');
 
         if (clickedLessonCard) {
@@ -86,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (videoId) {
                 const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
                 youtubeVideoIframe.src = embedUrl;
-                videoModal.style.display = 'flex'; // Abre o modal do vídeo
+                videoModal.style.display = 'flex';
             }
         }
     });
@@ -94,20 +116,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fechar a seção de aulas ao clicar no botão "Fechar Aulas"
     closeLessonsSectionButton.addEventListener('click', () => {
         courseLessonsSection.classList.remove('active');
-        lessonsCardsContainer.innerHTML = ''; // Limpa os cards ao fechar
+        lessonsCardsContainer.innerHTML = '';
     });
 
     // Fechar o modal do vídeo
     closeVideoModalButton.addEventListener('click', () => {
         videoModal.style.display = 'none';
-        youtubeVideoIframe.src = ''; // Para o vídeo
+        youtubeVideoIframe.src = '';
     });
 
     // Fechar modal do vídeo ao clicar fora
     videoModal.addEventListener('click', (event) => {
         if (event.target === videoModal) {
             videoModal.style.display = 'none';
-            youtubeVideoIframe.src = ''; // Para o vídeo
+            youtubeVideoIframe.src = '';
         }
     });
 });
