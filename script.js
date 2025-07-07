@@ -60,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: "Aula 1: Introdução ao Flask", videoId: "Inp79ZcIjDI", description: "criando uma rota raiz com hello word." },
                 { title: "Aula 2: Rotas", videoId: "f7yuwEKTXAs", description: "criando o CRUD." },
                 { title: "Aula 3: API com Banco de dados", videoId: "HrQIkkWUQNA", description: "implementando banco de dados." },
-                { title: "Aula 4: Formulários", videoId: "ZgF0m2RLhGs", description: "manipule api com frontend" },
+                { title: "Aula 4: Formulários", videoId: "ZgF0m2RLhGs", description: "manipule api com frontend" }
+                ,
                 { 
                     title: "Exercícios de fixação - Python",
                     type: "pdf",
