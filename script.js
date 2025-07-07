@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     description: "Lista de exercícios para prática de backend usando flask",
                     iconClass: " fa-file-pdf",
                     buttonText: "Visualizar exercícios"
+                }
             ]
         }
     };
